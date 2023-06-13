@@ -1,54 +1,70 @@
-# PROGRAMACIÓN EN NUEVAS TECNOLOGIAS 2
+# Getting Started with Create React App
 
-## Instrucciones de resolución del examen recuperatorio
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Es tu primer día en [tecnoshare.com](http://tecnoshare.com) luego de un intenso entrenamiento de 10 semanas por fin tenes la oportunidad de mostrar lo que aprendiste, y tu potencial como desarrollador frontend con React.
+## Available Scripts
 
-Luego de abrir el correo encuentras un mail de tu Líder Técnico con tu primera asignación!! 💪
+In the project directory, you can run:
 
-> Bienvenid@! estuvimos esperando por horas que llegaras, tenemos varias tareas criticas y prioritarias en nuestro backlog. Por favor presta mucha atención a las instrucciones. No dudes en preguntarme cualquier cosa, aunque generalmente estoy muy ocupado resolviendo problemas heredados de las rotaciones de los desarrolladores.
+### `npm start`
 
-> En el presente repositorío encontrarás un proyecto de react que ya tiene codigo base del front con el que vamos a trabajar. Te aconsejo que sigas los siguientes pasos para armar tu entorno de trabajo.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-> 1. Realizar un Fork del presente repositorio
-> 2. Realizar un clone del presente repositorio
-> 3. Instalar las dependencias
-> 4. Solicitar los end-points (API) del proyecto de backend
-> 5. Probar los end-points
-     >    El backend se conecta con una base de datos Mongodb en la cual se encuentra la base de datos **sample_analytics** con las collections llamadas **accounts**, **customers** y **transactions** que contienen las transacciones de 5000 clientes. Por ahora trabajaremos con **customers** y **accounts**
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-> ### TUS TAREAS SON LAS SIGUIENTES POR ORDEN DE PRIORIDAD
->
-> 1. Necesitamos conectar el proyecto de React con el backend, mostrar un listado de los customers (no te preocupes por el diseño estético)
-> 2. Una vez realizado el punto anterior necesitamos crear un componente llamado **Customer** que muestre los siguientes datos del cliente:
-     >    > "username", "name", "address", "birthdate", "email", "accounts"
-     >    > No te preocupes por el diseño estético, pero si por la "prolijidad"
-> 3. Tenemos que crear un componente Account que muestre detalles de la cuenta, **limit** y **products** . Para esto deberías convertir en un link el numero de cuenta en el componente Customer, para que haciendo clic en ese link se redirija a una pagina con la información de la cuenta.
-> 4. Hay algunos clientes que tienen alguna de sus cuentas con limites inferiores a 10000. Necesitamos que el componente Customer identifique de alguna forma esos clientes.
+### `npm test`
 
-> ### SI TE DA EL TIEMPO DAME UN MANO TAMBIEN EN...
->
-> 5. Darle a los componentes un diseño estético, podrías usar algun framework de React para controles.
->
-> Desde ya muchas gracias por la colaboración! 😉 como te comente en la entrevista soy muy detallista en la prolijidad del codigo y la performance cada detalle cuenta, no me gusta mucho las cosas rebuscadas y complicadas y codigo dificil de leer, sin embargo si no estas seguro, es mejor que lo resuelvas como puedas y me dejes notas en el readme.md del repo, para que yo pueda probar.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Intrucciones para la entrega
+### `npm run build`
 
-Si ya terminaste o son las 10:00 asegurate de seguir los siguientes pasos para la entrega:
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-1. Poner cualquier nota aclaratoria de algun paso que sea necesario para probar, mas abajo en este mismo archivo (notas para la ejecución)
-2. Realizar un commit a tu repo con un mensaje con tu **nombre completo**
-3. Realizar un push a tu repositorio
-4. Realizar un pull request a mi repositorio
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Listado de endpoint
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-> -GET /api/customers?pageSize=pageSize&page=page
+### `npm run eject`
 
-> -GET /api/custoers/:id
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-> -GET /api/accounts?pageSize=pageSize&page=page
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-> -GET /api/accounts/:id
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## Notas para la ejecución
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
