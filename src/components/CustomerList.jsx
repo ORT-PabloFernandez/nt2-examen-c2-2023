@@ -6,14 +6,14 @@ export const CustomerList = () => {
     const customers = useFetchCustomers();
 
     return (
-        <ul>
-            <ul>
+        <>
+            <ul className={'row justify-content-center pt-5 list-unstyled text-center'}>
                 {
                     customers.map((customer) => (
-                        <Customer key={customer.id} {...customer} ></Customer>
+                        <Customer key={customer._id} {...customer} ></Customer>
                     ))
                 }
             </ul>
-        </ul>
+        </>
     )
 }
