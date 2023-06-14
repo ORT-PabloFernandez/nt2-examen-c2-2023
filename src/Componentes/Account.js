@@ -9,7 +9,7 @@ const [products ,setProducts] = useState([]);
 const getAccount =async () => {
     const resp = await axios.get(
         `https://tp2-analytics.azurewebsites.net/api/accounts`
-    );
+       );
     console.log(resp.data);
     setAccount(resp.data);
     setProducts(resp.data.products);

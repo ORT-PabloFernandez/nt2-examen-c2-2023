@@ -1,4 +1,4 @@
-import {BrowserRouter,Router,Route} from 'react-router-dom'
+import {BrowserRouter,Route,Routes} from 'react-router-dom';
 import './App.css';
 import { useEffect,useState } from 'react';
 import axios from 'axios';
@@ -9,7 +9,7 @@ import Account from './Componentes/Account.js'
 function App() {
   const [customers, setcustomers]= useState([])
   const getCustomers = async () =>{
-    const resp =await axios.get("/api/customers?pageSize=1&page=10")
+    const resp =await axios.get("https://tp2-analytics.azurewebsites.net/api/customers")
     console.log(resp.data);
      setcustomers(resp.data) 
   }
@@ -20,11 +20,11 @@ function App() {
 
   return (
     <BrowserRouter>
-    <Router>
+    <Routes>
       <Route path='/' element={<Home customers={customers}/>}/>
       <Route path='/:id' element={<Customer/>}/>
       <Route path='/account/:id' element={<Account/>}/>
-    </Router>
+    </Routes>
     </BrowserRouter>
   );
 }
