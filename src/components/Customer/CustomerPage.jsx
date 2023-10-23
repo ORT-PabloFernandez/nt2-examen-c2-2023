@@ -14,7 +14,6 @@ const CustomerPage = (props) => {
             .catch(error => console.log(error));
     }, []);
     
-console.log(customers);
     return(
         <div className="container">             
             <CustomerList Customers={customers} />
