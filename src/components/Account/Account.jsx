@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const Customer = (props) => {
 	return (
 		<div>
@@ -10,19 +8,7 @@ const Customer = (props) => {
 				<li>address: {props.address}</li>
 				<li>birthdate: {props.birthdate}</li>
 				<li>email: {props.email}</li>
-				<li>
-					accounts:
-					<ol>
-						{props.accounts.map((account) => {
-							return (
-								<li>
-									{" "}
-									<Link to={`/accounts/${account}`}>Cuenta {account}</Link>
-								</li>
-							);
-						})}
-					</ol>
-				</li>
+				<li>accounts: {JSON.stringify(props.accounts)}</li>
 			</ul>
 		</div>
 	);
