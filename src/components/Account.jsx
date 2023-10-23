@@ -3,13 +3,13 @@ import {useParams} from "react-router-dom";
 
 const Account = () => {
     const {id} = useParams();
-
+    const valorMax = 10000;
     const [account, setAccount] = useState([]);
 
     useEffect(() => {
         fetch("https://analyticsbackendort.azurewebsites.net/api/accounts")
-        .then((response) => response.json)
-        .then((data) => setAccount(data.find((account) => account.account_id == id)))
+        .then((response) => response.json())
+        .then((data) => setAccount(data.find((account) => account.account_id == id && account.limit < valorMax)))
         .catch((error) => console.log(error));
     }, []);
     

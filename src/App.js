@@ -7,7 +7,6 @@ function App() {
   
   return (
     <BrowserRouter>
-      <p>Test</p>
       <Routes>
         <Route path="/">
           <Route path="/customers" element={<CostumerPage />} />
