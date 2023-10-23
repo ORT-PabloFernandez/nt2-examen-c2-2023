@@ -3,9 +3,9 @@ import Customer from "./Customer";
 const CustomerList = (props) => {
 	return (
 		<ol>
-           {props.Customers.map((customer) => {
+			{props.Customers.map((customer) => {
 				return (
-					<li key={customer._id} >
+					<li key={customer._id}>
 						<Customer
 							_id={customer._id}
 							username={customer.username}
@@ -13,13 +13,16 @@ const CustomerList = (props) => {
 							address={customer.address}
 							birthdate={customer.birthdate}
 							email={customer.email}
-							accounts={customer.accounts}
-							tier_and_details={customer.tier_and_details}
+							accounts={customer.accounts.map((account) => ({
+								...account,
+								isBelow1000:
+									props.Accounts.find((acc) => acc.account_id == account)
+                                    .limit < 1000,
+							}))}
 						/>
 					</li>
 				);
 			})}
-
 		</ol>
 	);
 };

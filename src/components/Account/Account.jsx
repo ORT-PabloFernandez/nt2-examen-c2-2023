@@ -14,8 +14,6 @@ const Customer = (props) => {
 			.catch((error) => console.log(error));
 	}, []);
 
-	console.log(account);
-
 	return (
 		<div>
 			<ul key={account._id}>
