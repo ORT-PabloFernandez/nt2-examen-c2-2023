@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import  Customer from './customer'
 
 const CustomerPage = () => {
   const [customers, setCustomers] = useState([]);
@@ -25,18 +26,9 @@ const CustomerPage = () => {
     loadCustomers(currentPage);
   }, [currentPage, pageSize]);
 
-  
   return (
     <div>
-      <ul className="users-list">
-        {customers.map((customer) => {
-          return (
-            <div>
-              <h4>{customer.username}</h4>
-            </div>
-          );
-        })}
-      </ul>
+      <Customer customers={customers} />
     </div>
   );
 };
