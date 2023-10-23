@@ -15,8 +15,7 @@ const Customer = (props) => {
 					<ol>
 						{props.accounts.map((account) => {
 							return (
-								<li>
-									{" "}
+								<li key={account}>
 									<Link to={`/accounts/${account}`}>Cuenta {account}</Link>
 								</li>
 							);
