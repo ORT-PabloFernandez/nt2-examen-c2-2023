@@ -17,7 +17,7 @@ const Customer = (props) => {
 						{props.accounts.map((account) => {
 							return (
 								<li key={account._id}>
-									<Link to={`/accounts/${account._id}`}>Cuenta {account.account_id}</Link>
+									<Link to={`/accounts/${account._id}`}>Cuenta {account.account_id}  {account.limit < 10000 ? "(el limite es inferior a 10000)" : ""}</Link>
 								</li>
 							);
 						})}
