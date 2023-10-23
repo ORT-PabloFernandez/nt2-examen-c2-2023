@@ -6,10 +6,10 @@ const Customer = (props) => {
 	const [account, setAccount] = useState([]);
 
 	useEffect(() => {
-		fetch(`https://analyticsbackendort.azurewebsites.net/api/accounts`)
+		fetch(`https://analyticsbackendort.azurewebsites.net/api/accounts/${id}`)
 			.then((response) => response.json())
 			.then((data) => {
-				setAccount(data.find((item) => item.account_id == id));
+				setAccount(data);
 			})
 			.catch((error) => console.log(error));
 	}, []);

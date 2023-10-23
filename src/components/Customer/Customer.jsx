@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 const Customer = (props) => {
+    console.log(props.accounts);
 	return (
 		<div>
 			<ul key={props._id}>
@@ -15,8 +16,8 @@ const Customer = (props) => {
 					<ol>
 						{props.accounts.map((account) => {
 							return (
-								<li key={account}>
-									<Link to={`/accounts/${account}`}>Cuenta {account}</Link>
+								<li key={account._id}>
+									<Link to={`/accounts/${account._id}`}>Cuenta {account.account_id}</Link>
 								</li>
 							);
 						})}

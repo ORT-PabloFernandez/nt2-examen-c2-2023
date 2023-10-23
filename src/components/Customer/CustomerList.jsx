@@ -1,9 +1,24 @@
 import Customer from "./Customer";
 
 const CustomerList = (props) => {
+	const replaceAccountsWithData = (customer) => {
+		const updatedAccounts = customer.accounts.map((accountId) => {
+			const matchedAccount = props.Accounts.find(
+				(account) => account.account_id === accountId
+			);
+			return matchedAccount ? matchedAccount : accountId;
+		});
+
+		return {
+			accounts: updatedAccounts,
+		};
+	};
+
 	return (
 		<ol>
 			{props.Customers.map((customer) => {
+				const updatedAccounts = replaceAccountsWithData(customer);
+
 				return (
 					<li key={customer._id}>
 						<Customer
@@ -13,12 +28,7 @@ const CustomerList = (props) => {
 							address={customer.address}
 							birthdate={customer.birthdate}
 							email={customer.email}
-							accounts={customer.accounts.map((account) => ({
-								...account,
-								isBelow1000:
-									props.Accounts.find((acc) => acc.account_id == account)
-                                    .limit < 1000,
-							}))}
+							accounts={updatedAccounts.accounts}
 						/>
 					</li>
 				);
