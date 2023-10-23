@@ -2,12 +2,24 @@ import CustomerList from "./CustomerList";
 import { useState, useEffect } from "react";
 
 const CustomerPage = (props) => {
-	return (
-		<div className="container">
-			<h1>Customer page</h1>
-            <CustomerList />
-		</div>
-	);
-};
+    const [customers, setCustomers] = useState([]);
+
+    useEffect(()=>{
+       fetch("https://analyticsbackendort.azurewebsites.net/api/customers?pageSize=10&page=2")
+            .then(response => response.json())
+            .then(data => 
+                {
+                    setCustomers(data);
+            })
+            .catch(error => console.log(error));
+    }, []);
+    
+console.log(customers);
+    return(
+        <div className="container">             
+            <CustomerList Customers={customers} />
+        </div>
+    )
+}
 
 export default CustomerPage;
