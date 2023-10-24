@@ -52,3 +52,6 @@ Si ya terminaste o son las 10:00 asegurate de seguir los siguientes pasos para l
 > -GET /api/accounts/:id
 
 ## Notas para la ejecución
+
+en el home esta el link de customers
+/customers
