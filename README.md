@@ -52,3 +52,14 @@ Si ya terminaste o son las 10:00 asegurate de seguir los siguientes pasos para l
 > -GET /api/accounts/:id
 
 ## Notas para la ejecución
+
+### Para correr el proyecto:
+1. npm i
+2. npm start
+
+### Navegacion:
+
+Home: http://localhost:3000/
+Página de customer: http://localhost:3000/customer/:id
+Página de account: http://localhost:3000/account/:id
+
