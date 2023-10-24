@@ -45,10 +45,10 @@ Si ya terminaste o son las 10:00 asegurate de seguir los siguientes pasos para l
 
 > -GET /api/customers?pageSize=pageSize&page=page
 
-> -GET /api/custoers/:id
+> -GET /api/customers
 
 > -GET /api/accounts?pageSize=pageSize&page=page
 
-> -GET /api/accounts/:id
+> -GET /api/Account/:id
 
 ## Notas para la ejecución
