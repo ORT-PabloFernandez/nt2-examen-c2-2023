@@ -1,0 +1,10 @@
+.customer-box {
+  width: 368px;
+  height: 368px;
+  margin: 10px 10px 10px;
+
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 3px 13px 1.5px rgba(0, 0, 0, 0.9);
+}
