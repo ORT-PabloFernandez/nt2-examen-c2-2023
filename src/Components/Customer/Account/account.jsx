@@ -43,7 +43,7 @@ const Account = () => {
   return (
     <>
       <h3>{account.limit}</h3>
-      {accountLimit < 10000 ? <p style={{color:"red"}}>Account Limit is less than 10,000</p> : null}
+      {accountLimit < 10000 ? <p style={{color:"red"}}>Account Limit es menor que 10,000</p> : null}
       {account.products.map((product, productIndex) => (
         <li key={productIndex}>{product}</li>
       ))}
