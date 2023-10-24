@@ -13,7 +13,9 @@ const Customer = ({ customers }) => {
             <h4>Accounts:</h4>
             <ul>
               {customer.accounts.map((account, accountIndex) => (
-                <li key={accountIndex}>{account}</li>
+                <li key={accountIndex}>
+                  <Link to={`/accounts/${account}`}>{account}</Link>
+                </li>
               ))}
             </ul>
           </div>
