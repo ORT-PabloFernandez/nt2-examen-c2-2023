@@ -20,8 +20,8 @@ const CustomerList = (props) => {
 				const updatedAccounts = replaceAccountsWithData(customer);
 
 				return (
-					<li key={customer._id}>
-						<Customer
+					<li className="mb-4" key={`customerli${customer._id}`}>
+						<Customer                            
 							_id={customer._id}
 							username={customer.username}
 							name={customer.name}

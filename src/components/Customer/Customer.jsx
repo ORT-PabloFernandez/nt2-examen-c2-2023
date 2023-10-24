@@ -1,23 +1,44 @@
 import { Link } from "react-router-dom";
 
 const Customer = (props) => {
-    console.log(props.accounts);
 	return (
-		<div>
+		<div className="card p-3">
 			<ul key={props._id}>
-				<li>_id: {props._id}</li>
-				<li>username: {props.username}</li>
-				<li>name: {props.name}</li>
-				<li>address: {props.address}</li>
-				<li>birthdate: {props.birthdate}</li>
-				<li>email: {props.email}</li>
 				<li>
-					accounts:
+					<strong>_id:</strong> {props._id}
+				</li>
+				<li>
+					<strong>username:</strong> {props.username}
+				</li>
+				<li>
+					<strong>name:</strong> {props.name}
+				</li>
+				<li>
+					<strong>address:</strong> {props.address}
+				</li>
+				<li>
+					<strong>birthdate:</strong> {props.birthdate}
+				</li>
+				<li>
+					<strong>email:</strong> {props.email}
+				</li>
+				<li>
+					<strong>accounts:</strong>
 					<ol>
 						{props.accounts.map((account) => {
 							return (
-								<li key={account._id}>
-									<Link to={`/accounts/${account._id}`}>Cuenta {account.account_id}  {account.limit < 10000 ? "(el limite es inferior a 10000)" : ""}</Link>
+								<li className="mb-2">
+									<Link
+										to={`/accounts/${account._id}`}
+										className={
+											account.limit < 10000 ? "account-below-10000" : ""
+										}
+									>
+										Cuenta {account.account_id}{" "}
+										{account.limit < 10000
+											? "(el limite es inferior a 10000)"
+											: ""}
+									</Link>
 								</li>
 							);
 						})}

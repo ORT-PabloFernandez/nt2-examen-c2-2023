@@ -15,12 +15,14 @@ const Customer = (props) => {
 	}, []);
 
 	return (
-		<div>
-			<ul key={account._id}>
-				<li>limit: {account.limit}</li>
-				<li>products: {JSON.stringify(account.products)}</li>
-			</ul>
-			<Link to={`/customers`}>Go Back</Link>
+		<div className="container">
+			<div className="card">
+				<ul key={account._id} className="card-body">
+					<li><strong>limit:</strong> {account.limit}</li>
+					<li><strong>products:</strong> {JSON.stringify(account.products)}</li>
+				</ul>
+				<Link to={`/customers`}>Go Back</Link>
+			</div>
 		</div>
 	);
 };
