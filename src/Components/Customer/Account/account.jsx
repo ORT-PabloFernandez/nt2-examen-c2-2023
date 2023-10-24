@@ -14,9 +14,7 @@ const Account = () => {
           throw new Error();
         }
         const data = await response.json();
-        console.log("Data from the API:", data); // Agregar un console.log para ver los datos
         const selectedAccount = data.find((acc) => acc.account_id == accounts);
-        console.log("Data from the API:", selectedAccount);
         if (!selectedAccount) {
           setError("La cuenta no se encontró.");
         } else {
