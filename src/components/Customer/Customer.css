@@ -1,0 +1,37 @@
+
+.customer-container {
+    background-color: #007BFF;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  
+
+  .customer-title {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+
+  .customer-accounts {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+
+  .customer-account-link {
+    color: #007BFF;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .customer-account-link:hover {
+    text-decoration: underline;
+  }
+  
+
+  .customer-list-item {
+    margin-bottom: 5px;
+  }
+  

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-import Customer from './Customer'; // Importa el componente Customer
+import './Customer.css'
+import Customer from './Customer'; 
 
 function CustomerDetail() {
   const { id } = useParams();
@@ -23,7 +23,6 @@ function CustomerDetail() {
   return (
     <div>
       {customerData ? (
-        // Renderiza el componente Customer con los datos del cliente
         <Customer customerData={customerData} />
       ) : (
         <p>Cargando datos del cliente...</p>

@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CustomerList from './components/Customer/CustomerList';
 import CustomerDetails from './components/Customer/CustomerDetails';
-import AccountDetail from './components/Account/AccountDetail'; // Asegúrate de importar AccountDetail
-//import Customer from './components/Customer/Customer';
+import AccountDetail from './components/Account/AccountDetail'; 
+
 
 function App() {
   return (
