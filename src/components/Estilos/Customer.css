@@ -1,0 +1,40 @@
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link {
+  color: rgb(7, 7, 5) 204, 255, 0;
+}
+
+a:visited {
+  color: rgb(128, 0, 0);
+}
+
+a:focus {
+  border-bottom: 1px solid;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+}
+
+a:active {
+  color: red;
+}
+
+body {
+  background-color: lightgrey;
+  color: blue;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+}
+
+div {
+  background-color: rgba(21, 118, 36, 0.426);
+  color: white;
+}
