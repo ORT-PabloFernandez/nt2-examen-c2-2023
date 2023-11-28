@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import Costumer from "../CostumerList";
+import CostumerList from "./CostumerList";
 
 const CostumerPage = (props) => {
     const [costumers, setCostumers] = useState([]);
 
     useEffect(() => {
 
-        fetch(`https://analyticsbackendort.azurewebsites.net/api/customers?pageSize=${pageSize}"&"page${page}`)
+        fetch(`https://analyticsbackendort.azurewebsites.net/api/customers?`)
             .then(response => response.json())
             .then(data => {
                 setCostumers(data);
@@ -20,3 +20,5 @@ const CostumerPage = (props) => {
         </div>
     )
 }
+
+export default CostumerPage;
