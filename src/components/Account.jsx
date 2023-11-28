@@ -1,35 +1,34 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 function Account() {
   const { id } = useParams();
-  const [accountData, setAccountData] = useState(null);
-
+  const valorMax = 10000;
+  const [account, setAccount] = useState([]);
   useEffect(() => {
     // Realiza una solicitud GET a la API para obtener los datos de la cuenta
-    axios
-      .get(`https://analyticsbackendort.azurewebsites.net/api/accounts/${id}`)
-      .then((response) => {
-        setAccountData(response.data);
-      })
-      .catch((error) => {
-        console.error('Error fetching account data:', error);
-      });
-  }, [id]);
-
+    fetch("https://analyticsbackendort.azurewebsites.net/api/accounts")
+      .then((response) => response.json())
+      .then((data) =>
+        setAccount(
+          data.find(
+            (account) => account.account_id == id && account.limit < valorMax
+          )
+        )
+      )
+      .catch((error) => console.log(error));
+  }, []);
 
   return (
     <div>
-      <h2>Detalles de la Cuenta</h2>
-      {accountData ? (
-        <div>
-          <p><strong>Límite:</strong> {accountData.limit}</p>
-          <p><strong>Productos:</strong> {accountData.products.join(', ')}</p>
-        </div>
-      ) : (
-        <p>Cargando datos de la cuenta.</p>
-      )}
+      <h2>Account: {account.account_id}</h2>
+      <h3>Limit: {account.limit}</h3>
+      <h4>
+        Products:{" "}
+        {account.products?.map((product) => {
+          return <div>{product}</div>;
+        })}
+      </h4>
     </div>
   );
 }
